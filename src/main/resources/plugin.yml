@@ -1,0 +1,5 @@
+name: ElowyrCore
+author: SkillOfFire
+version: 1.0
+main: fr.elowyr.core.ElowyrCore
+depend: [ Vault, ShopGUIPlus, Factions, PlaceholderAPI, DecentHolograms, Jobs, LunarClient-API, CombatTagPlus, LuckPerms ]

@@ -1,0 +1,9 @@
+server:
+  goal: 300
+  current: 0
+  subtitle: "§fMerci de votre §aparticipation §f! §2§l✔"
+  vip-subtitle: "§fMerci de votre §aparticipation §f! §2§l✔"
+  vip-rewards:
+    - 'eco give * 300000'
+  rewards:
+    - 'eco give * 150000'

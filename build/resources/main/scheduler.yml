@@ -1,0 +1,11 @@
+timezone: 'Europe/Paris'
+pool-size: 1
+
+tasks:
+  - start:
+      day: TUESDAY
+      hours: 10
+      minutes: 30
+      seconds: 27
+    commands:
+      - 'eventfarm start 60'

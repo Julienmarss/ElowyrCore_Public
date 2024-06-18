@@ -1,0 +1,18 @@
+world: world
+chest-spawns: 5
+blocks-around-spawn-airdrop: 2000
+loots:
+  test:
+    loot: "give %player% minecraft:stone 1"
+  test2:
+    loot: "give %player% minecraft:redstone 1"
+  test3:
+    loot: "give %player% minecraft:iron_ingot 1"
+  test4:
+    loot: "give %player% minecraft:gold_ingot 1"
+  test5:
+    loot: "give %player% minecraft:diamond 1"
+  test6:
+    loot: "give %player% minecraft:emerald 1"
+  test7:
+    loot: "give %player% minecraft:coal 1"

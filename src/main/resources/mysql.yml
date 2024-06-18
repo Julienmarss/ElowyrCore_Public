@@ -1,0 +1,13 @@
+url: jdbc:mysql://localhost:3306/elowyrcore?characterEncoding=utf8
+username: root
+password: Arabe123
+timeout:
+  login: 5
+  valid: 10
+
+tables:
+  users: e_users
+  boosts: e_boosts
+  user_classification: e_user_classification
+  faction_classification: e_faction_classification
+  aps: t_aps

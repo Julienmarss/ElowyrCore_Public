@@ -1,0 +1,57 @@
+float-format: '%.2f'
+
+kill-streak-broadcast-times: 5
+
+anti-spam-delay: 5000
+
+max-drop:
+  nether-wart: 3
+  cocoa: 3
+
+furnace-items:
+  IRON_ORE: IRON_INGOT
+
+anti-clean-up:
+  timer: 10
+  timer-format: '&7Loots verrouillés pour la faction &c&l{faction} &7pendant &a{time} secondes&7.'
+  disallowed-regions:
+    - warzone
+
+invest-teleportation:
+  time: 5
+  message-times:
+    - 5
+    - 4
+    - 3
+    - 2
+    - 1
+  server-name: invest
+
+classification:
+  tasks-period:
+    save: 600
+    time-played: 300
+
+HOUE:
+  PRICE:
+    RADIUS:
+      LEVEL-1: 100
+      LEVEL-2: 200
+      LEVEL-3: 300
+    MULTIPLICATOR:
+      LEVEL-1: 100
+      LEVEL-2: 200
+      LEVEL-3: 300
+    AUTOSELL: 100
+    SPEED:
+      LEVEL-1: 100
+      LEVEL-2: 200
+    HASTE: 100
+    KEYFINDER:
+      LEVEL-1: 100
+      LEVEL-2: 200
+      LEVEL-3: 300
+    SPAWNERFINDER:
+      LEVEL-1: 100
+      LEVEL-2: 200
+      LEVEL-3: 300

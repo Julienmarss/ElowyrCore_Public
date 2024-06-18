@@ -1,0 +1,19 @@
+broadcast-percentages:
+  - 100
+capture-task-period: 20
+outpost-list:
+  faction:
+    area:
+      pos1:
+        world: world
+        x: 132
+        y: 62
+        z: -234
+      pos2:
+        world: world
+        x: 138
+        y: 62
+        z: -240
+    rewards:
+      - classement give-faction pvp {faction} 2
+    reward-period: 12000

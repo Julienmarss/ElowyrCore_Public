@@ -1,0 +1,276 @@
+
+cooldown: '&cVous avez un cooldown de %time%'
+
+pub:
+  usage: '&cUsage: /pub <message>'
+  message: '&6[PUB] &7%sender%: &f%message%'
+
+staffmod:
+  vanish:
+    enabled: "&fVous n'êtes plus vanish"
+    disabled: "&fVous êtes vanish"
+
+
+items:
+  usage:
+    - '&b/items give <player> <item> &7- Donne un item au joueur'
+    - '&b/items help &7- Affiche la liste des items'
+  help: '&aLes items disponibles sont: %items%'
+  give:
+    usage: '&cUsage: /items give <player> <item>'
+    player-not-found: '&cLe joueur %name% est introuvable'
+    no-item: "&cL'item %name% n'existe pas"
+    invalid-item: "&cL'item %name% est mal configuré"
+    success: "&aVous avez donné l'item %item% au joueur %player%"
+  scepter:
+    not-combat: "&cVous ne pouvez pas utiliser cet objet hors combat."
+    cooldown: "&cVous êtes en cooldown pendant &d%time% seconde(s)&c."
+    teleport-delay: "&fVous allez être téléporté dans &b%time% &fsecondes !"
+
+furnace:
+  no-item: "&cVous n'avez aucun item à cuire"
+  success: '&aVous avez cuit %amount% items'
+
+invest:
+  already-running: '&cUne téléportation est déjà en cours'
+  teleportation-times:
+    5: '&aTéléportation dans &65 secondes'
+    4: '&aTéléportation dans &64 secondes'
+    3: '&aTéléportation dans &63 secondes'
+    2: '&aTéléportation dans &62 secondes'
+    1: '&aTéléportation dans &61 seconde'
+  teleportation-success: '&aTéléportation effectuée'
+  failed: '&cTéléportation annulé'
+
+listeners:
+  starting: '&cLe serveur démarre'
+  entity-killed: '&aVous avez obtenu %money%$'
+  harvested: '&aVous avez vendu pour %money%$ de marchandise'
+  empty-tab: '&cTab vide'
+  command-blocked: "&cVous ne pouvez pas exécuter cette commande !"
+  specialchars: "&cVotre commande comporte un caractère interdit ! (:)"
+  deathOther: "§c§l✘ &6%victim% &fest mort tout seul..."
+  death: "§c§l✘ &6%victim% &fa été tué par &e%killer% &7(%item%&7)"
+  anti-spam:
+    seconds: '&cVous pouvez renvoyer un message dans &e%seconds% &csecondes'
+    millis: '&cVous pouvez renvoyer un message dans &e%ms% &cmillisecondes'
+  boost:
+    finished: '&cLe boost %type% x%value% est terminé'
+  sell-stick:
+    cannot-access: '&cVous ne pouvez pas vendre cet inventaire'
+    success: '&aVous avez vendu pour %money%$'
+  throne:
+    capturing:
+      start: '&aVous commencez à capturer le trône'
+      stop: '&aVous ne capturez plus le trône'
+    too-many: '&cVous êtes trop dans cette zone'
+    win-money: '&aVous avez gagné %money%$'
+
+classification:
+  usage:
+    - '&b/classement give-faction <pvp|farm> <faction> <points> &7- Donne des points à une faction'
+    - '&b/classement give-player <farm|pvp|points|kill|death|mob_kill|time_played|block_broken|votes> <faction|player> <points> &7- Donne des points à un joueur'
+    - "&b/classement remove-faction <pvp|farm> <faction> <points> &7- Supprime des points d'une faction"
+    - "&b/classement remove-player <farm|pvp|points|kill|death|mob_kill|time_played|block_broken|votes> <faction|player> <points> &7- Supprime des points d'un joueur"
+    - '&b/classement reset <pvp|farm|points|kils|death|mob_kill|time_played|block_break|votes|all> &7- Reset le classement'
+    - '&b/classement force-save [users|factions] &7- Force la sauvegarde'
+  give-faction:
+    usage: '&cUsage: /classement give-faction <pvp|farm> <faction> <points>'
+    unknown-type: "&cLe type %type% n'existe pas"
+    no-faction: "&cLa faction %name% n'existe pas"
+    invalid-faction: '&cImpossible de donner des points à la faction %name%'
+    invalid-amount: '&cLa quantité de points est invalide'
+    negative-amount: '&cLa quantité de points doit être positive'
+    success: '&aVous avez donné %amount% points de %key% à la faction %name%'
+  give-player:
+    usage: '&cUsage: /classement give-player <pvp|farm|points|kill|death|mob_kill|time_played|block_broken|votes> <faction|player> <points>'
+    unknown-type: "&cLe type %type% n'existe pas"
+    no-player: "&cLe joueur %name% n'existe pas"
+    invalid-amount: '&cLa quantité de points est invalide'
+    negative-amount: '&cLa quantité de points doit être positive'
+    success: '&aVous avez donné %amount% points de %key% au joueur %name%'
+  remove-faction:
+    usage: '&cUsage: /classement remove-faction <pvp|farm> <faction> <points>'
+    unknown-type: "&cLe type %type% n'existe pas"
+    no-faction: "&cLa faction %name% n'existe pas"
+    invalid-faction: '&cImpossible de supprimer des points à la faction %name%'
+    invalid-amount: '&cLa quantité de points est invalide'
+    negative-amount: '&cLa quantité de points doit être positive'
+    success: '&aVous avez supprimé %amount% points de %key% de la faction %name%'
+  remove-player:
+    usage: '&cUsage: /classement remove-player <pvp|farm|points|kill|death|mob_kill|time_played|block_broken|votes> <faction|player> <points>'
+    unknown-type: "&cLe type %type% n'existe pas"
+    no-player: "&cLe joueur %name% n'existe pas"
+    invalid-amount: '&cLa quantité de points est invalide'
+    negative-amount: '&cLa quantité de points doit être positive'
+    success: '&aVous avez supprimé %amount% points de %key% du joueur %name%'
+  reset:
+    usage: '&cUsage: /classement reset <pvp|farm|points|kils|death|mob_kill|time_played|block_break|votes|all>'
+    unknown-type: "&cLe type %type% n'existe pas"
+    success:
+      all: '&aVous avez réinitialisé tous les classements'
+      faction: '&aVous avez réinitialisé le classement faction %type%'
+      player: '&aVous avez réinitialisé le classement joueur %type%'
+  force-save:
+    unknown-type: "&cLe type %type% n'existe pas"
+    success: '&aSauvegarde éffectuée &7(temps: %time%, changements: %changes%)'
+
+event:
+  massacre:
+    title:
+    starting: "&fDébut de l'event &3&lMassacre&f !"
+    has-expired: "&cL'event n'est pas lancé."
+    is-starting: "&cL'event est déjà lancé."
+    receive: "&fVous avez reçu &a%points%&f !"
+  farm:
+    starting: "&fDébut de l'event &3&lFarming &f!"
+    has-expired: "&cL'event n'est pas lancé"
+    is-starting: "&cL'event est déjà lancé"
+    terminate:
+      one: "&fLa faction %faction% remporte l'évenement Farming !"
+      two: "&fL'event farm vient de prendre fin !"
+  outpost:
+    usage:
+      - '&b/event outpost create <name> &7- Créer un OutPost'
+      - "&b/event outpost setpos <name> <1|2> &7- Définir la zone de l'OutPost"
+      - "&b/event outpost reward &7- Modifie les récompenses de l'OutPost"
+      - "&b/event outpost info <name> &7- Affiche les informations d'un OutPost"
+      - '&b/event outpost list &7- Liste les OutPosts'
+      - '&b/event outpost start &7- Rend les OutPost capturable'
+      - '&b/event outpost stop &7- Rend les OutPost incapturable'
+    create:
+      usage: '&cUsage: /event outpost create <name>'
+      already-exist: "&cL'OutPost {name} existe déjà"
+      cancelled: "&cLa crde l'OutPost est interrompu"
+      success: "&aVous avez crée l'OutPost {name}"
+    setpos:
+      usage: '&cUsage: /event outpost setpos <name> <1|2>'
+      invalid-position: '&cLa position indiquée est invalide'
+      unknown-position: '&cCette position est invalide. &7(Positions valides: 1 ou 2)'
+      no-outpost: "&cLe outpost {name} n'existe pas"
+      success-1: '&aVous avez défini la première position {world}, {x} {y} {z}'
+      success-2: '&aVous avez défini la seconde position {world}, {x} {y} {z}'
+    reward:
+      usage:
+        - '&b/event outpost reward period <name> <period> &7- Défini la periode de récompense'
+        - '&b/event outpost reward add <name> <command> &7- Ajoute une récompense à un OutPost'
+        - "&b/event outpost reward remove <name> <command> &7- Supprime une récompense d'un OutPost"
+        - "&b/event outpost reward list <name> &7- Liste les récompenses d'un OutPost"
+      period:
+        usage: '&cUsage: /event outpost reward period <name> <period>'
+        no-outpost: "&cLe outpost {name} n'existe pas"
+        invalid-time: '&cLe temps indiquée est invalide'
+        negative-time: '&cLe temps doit positif'
+        success: "&aVous avez défini le temps de récompense de l'OutPost {name} {time}"
+      add:
+        usage: '&cUsage: /event outpost reward add <name> <command>'
+        no-outpost: "&cLe outpost {name} n'existe pas"
+        success: "&aVous avez ajouté la récompense &f{reward} à &al'OutPost {name}"
+      remove:
+        usage: '&cUsage: /event outpost reward remove <name> <index>'
+        no-outpost: "&cLe outpost {name} n'existe pas"
+        invalid-index: "&cL'index indiquée est invalide"
+        no-rewards: "&cL'OutPost {name} n'a pas de récompense"
+          index: "&cL'index doit entre 0 et {max}"
+        success: "&aVous avez supprimé la récompense {reward} de l'OutPost {name}"
+      list:
+        usage: '&cUsage: /event outpost reward list <name>'
+        no-outpost: "&cLe outpost {name} n'existe pas"
+        empty: "&cL'OutPost {name} n'a pas de récompense"
+        header: "&aLa liste des récompense de l'OutPost {name} est: &7({ size })"
+        entry: '&a{index} - &f{command}'
+    info:
+      usage: '&cUsage: /event outpost info <name>'
+      no-outpost: "&cL'outpost {name} n'existe pas"
+      name: '&6Nom: &b{name}'
+      valid: '&6Validité: &aValide'
+      invalid: '&6Validité: &cInvalide'
+      reward-period: '&6Periode de r&b{time}'
+      min:
+        undefined: '&6Min: &cIndéfini'
+        location: '&6Min: &b{ world }, { x } { y } { z }'
+      max:
+        undefined: '&6Max: &cIndéfini'
+        location: '&6Max: &b{world}, {x} {y} {z}'
+      rewards:
+        empty: '&cAucune récompense'
+          header: '&6Récompense: &e{ size }'
+          entry: '&f - { command }'
+      list:
+        empty: "&cAucun OutPost n'est défini"
+      header: '&aLa liste des OutPosts est: &7({size})'
+      entry: '&6 - &e{name}'
+    start:
+      success: "&aVous avez défini les captures d'OutPost"
+      broadcast: '&aLes OutPosts sont désormais capturables'
+    stop:
+      success: "&aVous avez arrêté les captures d'OutPost"
+      broadcast: '&aLes OutPosts ne sont plus capturables'
+
+flytime:
+  usage:
+    - '&b/flytime set <player> <time>'
+    - '&b/flytime add <player> <time>'
+    - '&b/flytime remove <player> <time>'
+    - '&b/flytime <player>'
+  show:
+    no-user: "&cLe joueur {name} est introuvable"
+    success: '&aIl reste {time} de temps de vol à {name}'
+  set:
+    usage: '&cUsage: /flytime set <player> <time>'
+    invalid-time: '&cLe temps indiqué est invalide'
+    negative-amount: '&cLe temps indiqué doit être positif'
+    no-user: "&cLe joueur {name} est introuvable"
+    success: '&aVous avez défini le temps de vol de {name} à {time}'
+  add:
+    usage: '&cUsage: /flytime add <player> <time>'
+    invalid-time: '&cLe temps indiqué est invalide'
+    negative-amount: '&cLe temps indiqué doit être positif'
+    no-user: "&cLe joueur {name} est introuvable"
+    success: '&aVous avez ajouté {time} de temps de vol à {name}'
+  remove:
+    usage: '&cUsage: /flytime remove <player> <time>'
+    invalid-time: '&cLe temps indiqué est invalide'
+    negative-amount: '&cLe temps indiqué doit être positif'
+    no-user: "&cLe joueur {name} est introuvable"
+    success: '&aVous avez enlevé {time} de temps de vol à {name}'
+  flying:
+    finished: '&cFly terminé'
+  no-time: "&cVous n'avez pas de temps de fly"
+  none: '&c❌'
+
+voteparty:
+  usage:
+    - '&b/voteparty addvote <player> <amount> &7- Ajoute des votes un joueur'
+    - "&b/voteparty setgoal <amount> &7- Définir l'objectif de vote"
+  global: '&a&lVoteParty &7&e&l%current%/%goal%.'
+  addvote:
+    usage: '&cUsage: /voteparty addvote <player> <amount>'
+    invalid-amount: '&cLa quantité est invalide'
+    negative-amount: '&cLa quantité doit positive'
+    no-user: '&cLe joueur %player% est introuvable'
+    success: '&aVous avez ajouté %amount% vote'
+  setgoal:
+    usage: '&cUsage: /voteparty setgoal <amount>'
+    invalid-amount: '&cLa quantité est invalide'
+    negative-amount: '&cLa quantité doit être positive'
+    success: "&aVous avez défini l'objectif de vote %amount%"
+
+scoreboard:
+  classification:
+    no-key: '&cAucun'
+    no-value: '&c0'
+    no-index: '&c??'
+  no-boost: '&c0'
+
+lunar:
+  dont-faction: "&cVous n'avez pas de faction"
+  dont-player: "&cCe joueur n'est pas connecté."
+  playing: "&e%player% &aest sur &bLunar-Client&a !"
+  dont-playing: "&e%player% &cn'est pas sur &bLunar-Client&c !"
+  check-all:
+    - "&fJoueurs sur &bLunar-Client&f: &e%allname%"
+    - "&fTotal: &e%allnumber%"
+  rally:
+    remove: "&6%player% &fa retiré le point de rally."
+    set: "&6%player% &fa placé un point de rally !"

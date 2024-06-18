@@ -1,0 +1,20 @@
+reward-money: 200.0
+task-refresh: 100
+
+block-locations:
+  - world: world
+    x: 0
+    y: 0
+    z: 0
+
+zone:
+  pos1:
+    world: world
+    x: 0
+    y: 0
+    z: 0
+  pos2:
+    world: world
+    x: 0
+    y: 0
+    z: 0

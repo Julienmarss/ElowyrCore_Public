@@ -1,0 +1,4 @@
+time: 30 #En minutes
+
+rewards:
+  - classification give-faction %faction% %points%

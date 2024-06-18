@@ -1,0 +1,228 @@
+items:
+  god_dager:
+    type: DIAMOND_SWORD
+    damage: 0
+    can-drop: true
+    flags:
+      - HIDE_ENCHANTS
+    drop-on-death: false
+    display-name: '&cDague des dieux'
+    lore:
+      - '&6Propriétaire: &b{owner}'
+      - '&6Joueurs tués: &b{kill}'
+      - '&6Dernier tué: &b{last_kill}'
+    default-last-kill: '&cAucune'
+  god_bow:
+    type: BOW
+    damage: 0
+    drop-on-death: false
+    display-name: "&cArc des dieux"
+    lore:
+      - '&6Propriétaire: &b{owner}'
+      - '&6Entités touchés: &b{hits}'
+  scepter:
+    type: BLAZE_ROD
+    display-name: '&cSceptre de TP'
+    uses: 5
+    delay: 3
+    lore:
+      - '&6Propriétaire: &b{owner}'
+      - '&6Utilisation: &b{uses}/5'
+  farm:
+    effects:
+      - type: INVISIBILITY
+      - type: FAST_DIGGING
+        amplifier: 1
+      - type: SPEED
+        amplifier: 1
+      - type: FIRE_RESISTANCE
+    helmet:
+      type: LEATHER_HELMET
+      damage: 0
+      color: RED
+      display-name: '&bFarm Helmet'
+      lore:
+        - '&6Propriétaire: &b{owner}'
+    chestplate:
+      type: LEATHER_CHESTPLATE
+      damage: 0
+      color: RED
+      display-name: '&bFarm Chestplate'
+      lore:
+        - '&6Propriétaire: &b{owner}'
+    leggings:
+      type: LEATHER_LEGGINGS
+      damage: 0
+      color: RED
+      display-name: '&bFarm Leggings'
+      lore:
+        - '&6Propriétaire: &b{owner}'
+    boots:
+      type: LEATHER_BOOTS
+      damage: 0
+      color: RED
+      display-name: '&bFarm Boots'
+      lore:
+        - '&6Propriétaire: &b{owner}'
+  harvester_1:
+    type: DIAMOND_HOE
+    damage: 0
+    display-name: '&cMoissonneuse'
+    unbreakable: true
+    lore:
+      - '&6Niveau: &b1'
+      - '&6Propriétaire: &b{owner}'
+      - '&6Cultures récoltées: &b{block_broken}'
+      - '&6Cultures à recolter pour atteindre le niveau suivant: 300'
+    range: 0
+    upgrade:
+      max: 300
+      item: harvester_2
+  harvester_2:
+    type: DIAMOND_HOE
+    damage: 0
+    display-name: '&cMoissonneuse'
+    unbreakable: true
+    lore:
+      - '&6Niveau: &b2'
+      - '&6Propriétaire: &b{owner}'
+      - '&6Cultures récoltées: &b{block_broken}'
+      - '&6Cultures à recolter pour atteindre le niveau suivant: 500'
+    range: 0
+    multiplier: 2
+    upgrade:
+      max: 500
+      item: harvester_3
+  harvester_3:
+    type: DIAMOND_HOE
+    damage: 0
+    display-name: '&cMoissonneuse'
+    unbreakable: true
+    lore:
+      - '&6Niveau: &b3'
+      - '&6Propriétaire: &b{owner}'
+      - '&6Cultures récoltées: &b{block_broken}'
+      - '&6Cultures à recolter pour atteindre le niveau suivant: 1000'
+    range: 1
+    multiplier: 3
+    upgrade:
+      max: 1000
+      item: harvester_4
+  harvester_4:
+    type: DIAMOND_HOE
+    damage: 0
+    display-name: '&cMoissonneuse'
+    unbreakable: true
+    lore:
+      - '&6Niveau: &b4'
+      - '&6Propriétaire: &b{owner}'
+      - '&6Cultures récoltées: &b{block_broken}'
+      - '&6Cultures à recolter pour atteindre le niveau suivant: 2000'
+    range: 1
+    multiplier: 4
+    upgrade:
+      max: 2000
+      item: harvester_5
+  harvester_5:
+    type: DIAMOND_HOE
+    damage: 0
+    display-name: '&cMoissonneuse'
+    unbreakable: true
+    lore:
+      - '&6Niveau: &c5'
+      - '&6Propriétaire: &b{owner}'
+      - '&6Cultures récoltées: &b{block_broken}'
+    range: 2
+    multiplier: 5
+    auto-sell: true
+    upgrade:
+      max: 1000
+  farm_bag:
+    type: STORAGE_MINECART
+    damage: 0
+    display-name: '&eSac de Farm'
+    lore:
+      - '&6Cultures récupérées: &b{harvest}'
+      - '&6Propriétaire: &b{owner}'
+  combat_bag:
+    type: STORAGE_MINECART
+    damage: 0
+    display-name: '&eSac de Combat'
+    lore:
+      - '&6Propriétaire: &b{owner}'
+custom-items:
+  hammer3:
+    type: DIAMOND_PICKAXE
+    behavior: hammer
+    damage: 0
+    display-name: '&cHammer 3x3'
+    breaking-chance: 1.0
+    lore:
+      - '&aMine en 3x3'
+      - '&6Propriétaire: &b{owner}'
+      - '&6Blocs minés: &b{block_broken}'
+    blacklist:
+      - BEDROCK
+  hammer5:
+    type: DIAMOND_PICKAXE
+    behavior: hammer
+    damage: 0
+    radius: -2
+    display-name: '&cHammer 5x5'
+    breaking-chance: 1.0
+    lore:
+      - '&aMine en 5x5'
+      - '&6Propriétaire: &b{owner}'
+      - '&6Blocs minés: &b{block_broken}'
+    blacklist:
+      - BEDROCK
+  orbe_fire:
+    type: MAGMA_CREAM
+    behavior: orbe
+    display-name: '&cOrbe Fire'
+    effects:
+      - type: FIRE_RESISTANCE
+      - seconds: 60
+    lore:
+      - '&6Propriétaire: &b{owner}'
+      - '&6Utilisation: &b{uses}/3'
+  sell_stick:
+    type: STICK
+    behavior: sell_stick
+    display-name: '&eSellStick'
+    lore:
+      - ''
+      - '§fPropriétaire: §b{owner}'
+      - '§fUtilisations: §b{uses}§f/§b235'
+      - '§fMultiplicateur: §3x3'
+      - ''
+    max-uses: 235
+    multiplier: 3
+  iron:
+    type: IRON_AXE
+    behavior: placer
+    display-name: '§3§lGénérateur'
+    lore:
+      - ''
+      - '§fPropriétaire: §b{owner}'
+      - '§fUtilisations: §b{uses}§f/§b30'
+      - '§fBlocs: §bBlocs de Fers'
+      - ''
+      - '&7&l× &fCette §3hache §fvous permet de placer'
+      - '   §fdes §3blocs §fplus rapidement !'
+    place:
+      type: IRON_BLOCK
+      data: 0
+    period: 15
+    max-uses: 30
+  head:
+    shop-multiplier: 1.20
+    type: SKULL_ITEM
+    owner: Veighti_Sevena
+    damage: 3
+    display-name: '§f§lTête de Wither'
+    lore:
+      - ''
+      - '§fPropriétaire: §b{owner}'
+      - '§fGains: §b+20%'
+      - ''
